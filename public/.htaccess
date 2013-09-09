@@ -1,0 +1,9 @@
+Options -Indexes
+php_flag register_globals off
+AddDefaultCharset Utf-8
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(css¦js¦jpg¦gif¦ico)$
+RewriteRule ^(.*)$ index.php
