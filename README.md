@@ -11,7 +11,7 @@ class siteController extends AiwayController {
 	public function indexAction() {
 		$model = Pages::model();
 		$page = $model->getPageById(1);
-    echo $this->render('site/index', $page);
+		echo $this->render('site/index', $page);
 	}
 
 	public function errorAction($data=array()) {
@@ -20,7 +20,7 @@ class siteController extends AiwayController {
 		$page = (object) array(
 					'title' => 'Ошибка: '.$data['code'].' '.$data['message'],
 		);
-    echo $this->render('site/error', $page);
+		echo $this->render('site/error', $page);
 		
 	}
 	
